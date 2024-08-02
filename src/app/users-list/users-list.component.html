@@ -1,0 +1,16 @@
+<div class="cards-container">
+    <div *ngFor="let user of users" class="p-card">
+      <div class="p-card-body">
+        <img [src]="user.profilePicture" alt="Profile Picture">
+        <div class="p-card-details">
+          <div class="user-info">
+            <h2>{{ user.username }}</h2>
+            <i [ngClass]="user.verified ? 'fas fa-check-circle verified' : 'fas fa-times-circle not-verified'"></i>
+          </div>
+          <p>{{ user.email }}</p>
+          <p>{{ user.phone }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
